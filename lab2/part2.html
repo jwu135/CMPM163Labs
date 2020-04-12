@@ -19,20 +19,27 @@
       		var renderer = new THREE.WebGLRenderer();
       		renderer.setSize(window.innerWidth, window.innerHeight);
       		document.body.appendChild(renderer.domElement);
-      		camera.position.z = 300;
-      		camera.position.y = 60;
+      		camera.position.z = 230;
+      		camera.position.y = 140;
+      		camera.position.x = 40;
+      		camera.rotation.x = -.3;
       		var light = new THREE.PointLight(0xfacade, 4, 1000);
-			light.position.set(80, 50, -15);
+			light.position.set(80, 30, -15);
 			scene.add(light);
 
 			light = new THREE.PointLight(0x66b9cc, 2, 1000);
-			light.position.set(-80, 50, 25);
+			light.position.set(-80, 0, 25);
 			scene.add(light);
 
 			var loader = new THREE.GLTFLoader();
 			loader.load('cat.glb', function (gltf) {
 				scene.add(gltf.scene);
-
+				//gltf.scene.position.x = -10;
+				gltf.scene.position.y = 20.5;
+				gltf.scene.position.z = 25;
+				gltf.scene.scale.x = .7;
+				gltf.scene.scale.y = .7;
+				gltf.scene.scale.z = .7;
 			}, function (xhr) {
 				console.log((xhr.loaded / xhr.total * 100) + '% loaded' );
 			}, function (error) {
@@ -41,12 +48,12 @@
 
 			loader.load('tree.glb', function (gltf) {
 				scene.add(gltf.scene);
-				gltf.scene.position.x = 20;
+				gltf.scene.position.x = 0;
 				gltf.scene.position.y = -20;
 				gltf.scene.position.z = -40;
-				gltf.scene.scale.x = .2;
-				gltf.scene.scale.y = .2;
-				gltf.scene.scale.z = .2;
+				gltf.scene.scale.x = .25;
+				gltf.scene.scale.y = .25;
+				gltf.scene.scale.z = .25;
 			}, function (xhr) {
 				console.log((xhr.loaded / xhr.total * 100) + '% loaded' );
 			}, function (error) {
@@ -55,12 +62,12 @@
 
 			loader.load('chair.glb', function (gltf) {
 				scene.add(gltf.scene);
-				gltf.scene.position.x = -100;
+				gltf.scene.position.x = -10;
 				//gltf.scene.position.y = -20;
 				//gltf.scene.position.z = -40;
-				gltf.scene.scale.x = 20;
-				gltf.scene.scale.y = 20;
-				gltf.scene.scale.z = 20;
+				gltf.scene.scale.x = 25;
+				gltf.scene.scale.y = 25;
+				gltf.scene.scale.z = 25;
 				gltf.scene.rotation.y = .8;
 			}, function (xhr) {
 				console.log((xhr.loaded / xhr.total * 100) + '% loaded' );
