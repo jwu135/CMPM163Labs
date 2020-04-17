@@ -23,7 +23,7 @@
 						console.log(data); // output the text to the console
 						vshader = data;
 						count += 1;
-						//addCoolCube(); // we will write this method
+						addCoolCube(); // we will write this method
 					},
 				// onProgress callback
 					function (xhr) {
@@ -41,7 +41,7 @@
 						console.log(data); // output the text to the console
 						fshader = data;
 						count += 1;
-						//addCoolCube(); // we will write this method
+						addCoolCube(); // we will write this method
 					},
 				// onProgress callback
 					function (xhr) {
@@ -53,8 +53,30 @@
 					}
 				);
 
+				var geometry1, material1, mesh1;
 
+			// the addCoolCube method
+				function addCoolCube() {
+					if(count == 2) {
+						let uniforms = {
+							colorB: {type: 'vec3', value: new 
+								THREE.Color(0xACB6E5)},
+							colorA: {type: 'vec3', value: new 
+								THREE.Color(0x74ebd5)}
+						};
 
+						geometry1 = new THREE.BoxGeometry(1, 1, 1);
+						material1 =  new THREE.ShaderMaterial({
+							uniforms: uniforms,
+							fragmentShader: fshader,
+							vertexShader: vshader,
+							precision: "mediump"});
+
+						mesh1 = new THREE.Mesh(geometry1, material1);
+						mesh1.position.y = 2;
+						scene.add(mesh1);
+					}	
+				}
 
 			// setup the scene
       			var scene = new THREE.Scene();
@@ -106,6 +128,12 @@
 
 				cube3.rotation.x += 0.03;
 				cube3.rotation.y += 0.03;
+				
+				if(geometry1) {
+					geometry1.rotateX(0.01);
+					geometry1.rotateY(0.01);
+				}
+
 				renderer.render(scene, camera);
 			}
 			animate();
