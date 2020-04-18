@@ -15,7 +15,7 @@
 				THREE.Cache.enabled = true;
 				var count = 0;
 				var loader = new THREE.FileLoader();
-				var fshader, vshader;
+				var fshader, vshader, fshader2;
 
 				loader.load('shaders/vertexShader.vert',
 				// onLoad callback
@@ -44,6 +44,26 @@
 						fshader = data;
 						count += 1;
 						addCoolCube(); // we will write this method
+						// addCoolCube2(); // we will write this method
+
+					},
+				// onProgress callback
+					function (xhr) {
+						console.log((xhr.loaded/xhr.total * 100)+ '% loaded');
+					},
+				// onError callback
+					function (err) {
+						console.error('An error happened');
+					}
+				);
+
+				loader.load('shaders/fragmentShader2.frag',
+				// onLoad callback
+					function (data) {
+						console.log(data); // output the text to the console
+						fshader2 = data;
+						count += 1;
+						// addCoolCube(); // we will write this method
 						addCoolCube2(); // we will write this method
 
 					},
@@ -85,18 +105,26 @@
 
 			// addCoolCube2 method
 				function addCoolCube2() {
-					if(count == 2) {
+					if(count == 3) {
 						let uniforms = {
-							colorA: {type: 'vec3', value: new 
+							red: {type: 'vec3', value: new 
+								THREE.Color(0xff0000)},
+							green: {type: 'vec3', value: new
+								THREE.Color(0x00ff00)},
+							blue: {type: 'vec3', value: new 
 								THREE.Color(0x0000ff)},
-							colorB: {type: 'vec3', value: new 
-								THREE.Color(0xff0000)}
+							black: {type: 'vec3', value: new 
+								THREE.Color(0x000000)},
+
 						};
 
 						geometry2 = new THREE.BoxGeometry(1, 1, 1);
+						geometry2.rotateX(0.8);
+						geometry2.rotateY(0.5);
+						geometry2.rotateZ(0.5);
 						material2 =  new THREE.ShaderMaterial({
 							uniforms: uniforms,
-							fragmentShader: fshader,
+							fragmentShader: fshader2,
 							vertexShader: vshader,
 							precision: "mediump"});
 
@@ -123,6 +151,7 @@
 
       			var cube = new THREE.Mesh( geometry, material );
      			scene.add(cube);
+     			cube.translateY(0);
 
      		// add cube2     			
      			var geometry = new THREE.BoxGeometry();
