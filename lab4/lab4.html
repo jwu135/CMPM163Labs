@@ -14,26 +14,46 @@
 			// setup the scene
       			var scene = new THREE.Scene();
       			var camera = new THREE.PerspectiveCamera(75, 
-window.innerWidth/window.innerHeight, 0.1, 1000);
+					window.innerWidth/window.innerHeight, 0.1, 1000);
       			var renderer = new THREE.WebGLRenderer();
       			renderer.setSize(window.innerWidth, window.innerHeight);
       			document.body.appendChild(renderer.domElement);
-			camera.position.z = 5;
+				camera.position.z = 5;
 			
 			// setup the cube
-var geometry = new THREE.BoxGeometry();
-      			var material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+				var geometry = new THREE.BoxGeometry();
+				var normMap = THREE.ImageUtils.loadTexture("161_norm.jpg");
+				var texture = THREE.ImageUtils.loadTexture("161.jpg");
+				// var texture = THREE.TextureLoader("161.jpg");
+      			// var material = new THREE.MeshPhongMaterial( { map: texture } );
+      			var material = new THREE.MeshPhongMaterial({map: texture, normalMap: normMap});
       			var cube = new THREE.Mesh(geometry, material);
      			scene.add(cube);
 
-			// add the light
-			var light = new THREE.PointLight(0xffffff, 1, 1000);
-			light.position.set(10, 10, 10);
-			scene.add(light);
+     		// setup the cube2	
+     			var normMap = THREE.ImageUtils.loadTexture("192_norm.jpg");
+				var texture = THREE.ImageUtils.loadTexture("192.jpg");
+     			// material = new THREE.MeshPhongMaterial( { map: texture });
+     			var material = new THREE.MeshPhongMaterial({map: texture, normalMap: normMap});
+				var cube2 = new THREE.Mesh(geometry, material);
+				scene.add(cube2);
+				cube2.position.x -= 2;
 
+
+			// add the light
+				var light = new THREE.PointLight(0xffffff, 1, 1000);
+				light.position.set(10, 10, 10);
+				scene.add(light);
+
+			var value=0;
 			function animate() {
 				requestAnimationFrame(animate);
 				renderer.render(scene, camera);
+				light.position.x = Math.sin(value)*100;
+				light.position.z = Math.cos(value)*100;
+				value += 0.01;
+				// scene.add(light);
+				// light.position.x++;
 			}
 			animate();
 
