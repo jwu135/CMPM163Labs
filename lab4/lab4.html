@@ -11,6 +11,28 @@
 	<body>
 		<script src="../three.js-master/build/three.js"></script>
 		<script>
+			var geometry1, material1, mesh1;
+
+
+			function addTextureShaderCube() {
+				if(count == 2) {
+					var uniforms = {texture1: { type: "t", value: 
+						THREE.ImageUtils.loadTexture("161.jpg")}};
+
+	
+      				geometry1 = new THREE.BoxGeometry(1, 1, 1);
+      				material1 =  new THREE.ShaderMaterial({
+            			uniforms: uniforms,
+      					fragmentShader: fshader,
+              			vertexShader: vshader,
+      					precision: "mediump"});
+
+	      			mesh1 = new THREE.Mesh(geometry1, material1);
+    	  			mesh1.position.x = 2;
+      				scene.add(mesh1);
+    			}
+			}
+
 			// load shaders
 				THREE.Cache.enabled = true;
 				var count = 0;
@@ -23,7 +45,7 @@
       				console.log(data); // output the text to the console
       				vshader = data;
       				count += 1;
-      				//addTextureShaderCube(); // we will write this method
+      				addTextureShaderCube(); // we will write this method
       			},
       		// onProgress callback
       			function (xhr) {
@@ -40,7 +62,7 @@
       				console.log(data); // output the text to the console
       				fshader = data;
       				count += 1;
-      				//addTextureShaderCube(); // we will write this method
+      				addTextureShaderCube(); // we will write this method
       			},
       		// onProgress callback
       			function (xhr) {
@@ -60,6 +82,8 @@
       			document.body.appendChild(renderer.domElement);
 				camera.position.z = 5;
 			
+			
+
 			// setup the cube
 				var geometry = new THREE.BoxGeometry();
 				var normMap = THREE.ImageUtils.loadTexture("161_norm.jpg");
