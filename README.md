@@ -13,7 +13,7 @@ video: https://drive.google.com/file/d/1RmkysuQTNaQuMsLh3OI5a7QriIe7MOH5/view?us
 -the mid bottom cube is the cool rainbow cube with my custom fragment shader  
 
 ## lab 4 
-answer:  
+answer: (rounding up x and y)  
 	a)x = u*8-1  
 	b)y = 8-v*8  
 	c)white  
