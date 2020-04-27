@@ -10,6 +10,23 @@
 	</head>
 	<body>
 		<script src="../three.js-master/build/three.js"></script>
+		<script id="vertexShader" type="x-shader/x-vertex">
+			// code for vertex shader
+			varying vec2 vUv;
+			void main() {
+			  	vUv = uv;
+				vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
+				gl_Position = projectionMatrix * modelViewPosition;
+			}
+		</script>
+		<script id="fragmentShader" type="x-shader/x-fragment">
+			// code for fragment shader
+			uniform sampler2D texture1;
+			varying vec2 vUv;
+			void main() {
+   				gl_FragColor = texture2D(texture1, vUv);
+			}
+		</script>
 		<script>
 			var geometry1, material1, mesh1;
 
@@ -73,6 +90,8 @@
       				console.error('An error happened');
       			});
 
+      		
+
 			// setup the scene
       			var scene = new THREE.Scene();
       			var camera = new THREE.PerspectiveCamera(75, 
@@ -102,6 +121,19 @@
 				var cube2 = new THREE.Mesh(geometry, material);
 				scene.add(cube2);
 				cube2.position.x -= 2;
+
+			// setup the last cube
+				var uniforms = {texture1: { type: "t", value: 
+						THREE.ImageUtils.loadTexture("172.jpg")}};
+				var material = new THREE.ShaderMaterial({
+					uniforms: uniforms,
+					vertexShader: document.getElementById('vertexShader').textContent,
+					fragmentShader: document.getElementById('fragmentShader').textContent
+				});
+				var cube3 = new THREE.Mesh(geometry, material);
+				scene.add(cube3);
+				cube3.position.y -= 2;
+
 
 
 			// add the light
