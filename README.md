@@ -18,7 +18,7 @@ video: https://drive.google.com/file/d/1WUOdaT1Vc_z9MmE-sl-0vqD9oYyRH_Ru/view?us
 -the middle left cube is the Texture A cube  
 -the top cube is the Texture B + Normal Map B cube  
 -the right cube is shader loaded Texture C cube  
--the botttom cube is the 2x2 shader loaded cube, I took modulo of vUv*2.0 and 1.0 to get it done. To understand this, I treat the factor 2.0 as the 'density' of texture; and when vUv*2.0 gets out of the bounds, I take the modulo to push the shader back to the origin of the texture  
+-the botttom cube is the 2x2 shader loaded cube, I took modulo of vUv times 2.0 divided by 1.0 to get it done. To understand this, I treat the factor 2.0 as the 'density' of texture; and when vUv times 2.0 gets out of the bounds, I take the modulo to push the shader back to the origin of the texture  
 answer to qustion 24: (rounding up x and y)  
 	a)x = u*8-1  
 	b)y = 8-v*8  
