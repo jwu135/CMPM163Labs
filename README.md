@@ -25,5 +25,10 @@ answer to qustion 24: (rounding up x and y)
 	c)white  
 
 ## lab 5
-video: https://drive.google.com/file/d/1-rzAUMY-E3t5W_yNgo5r7HJlEpBCcksU/view?usp=sharing  
-I did part 1, I have an Audi R8 model used instead of the default kart. I modified the track to make it more challenging. I also changed the sun into blue.
+Part 1: video: https://drive.google.com/file/d/1-rzAUMY-E3t5W_yNgo5r7HJlEpBCcksU/view?usp=sharing  
+I have an Audi R8 model used instead of the default kart. I modified the track to make it more challenging. I also changed the sun into blue.  
+Part 2:  
+video a : https://drive.google.com/file/d/16XQgVeBgnn-NtxUkR9vpT0MdX0D-2SxO/view?usp=sharing  
+video b1: https://drive.google.com/file/d/1MaNgxRUTAP-cNg4YP-kWn2S8avZsM1zL/view?usp=sharing  
+video b2: https://drive.google.com/file/d/1Z4LeXnCk38HZOvzmFdA5vjRtx-1pinYi/view?usp=sharing  
+I made my particles and collapse after they explode.
