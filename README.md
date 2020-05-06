@@ -23,3 +23,7 @@ answer to qustion 24: (rounding up x and y)
 	a)x = u*8-1  
 	b)y = 8-v*8  
 	c)white  
+
+## lab 5
+video: https://drive.google.com/file/d/1-rzAUMY-E3t5W_yNgo5r7HJlEpBCcksU/view?usp=sharing  
+I did part 1, I have an Audi R8 model used instead of the default kart. I modified the track to make it more challenging. I also changed the sun into blue.
