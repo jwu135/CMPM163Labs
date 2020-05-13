@@ -32,12 +32,3 @@ video a : https://drive.google.com/file/d/16XQgVeBgnn-NtxUkR9vpT0MdX0D-2SxO/view
 video b1: https://drive.google.com/file/d/1MaNgxRUTAP-cNg4YP-kWn2S8avZsM1zL/view?usp=sharing  
 video b2: https://drive.google.com/file/d/1Z4LeXnCk38HZOvzmFdA5vjRtx-1pinYi/view?usp=sharing  
 I made my particles and collapse after they explode.
-
-## lab 6  
-Part 1:
-![](lab6/screenshot.png)  
--A point light is basically an illuminating dot. Spotlight is like the headlight of cars or flashlight. A directional light is a parallel light like the sunlight. An area light is an illuminating area.  
-![](lab6/Photo.jpg) ![](material.png)  
--I put the screenshot onto the texture of the monitor mesh to make it look like the real monitor.  
--I put two cubes from lab4 into the scene.  
--The skybox I added is a sunset skybox.  
