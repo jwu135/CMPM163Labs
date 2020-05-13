@@ -41,3 +41,7 @@ Part 1:
 -I put the screenshot onto the texture of the monitor mesh to make it look like the real monitor.  
 -I put two cubes from lab4 into the scene.  
 -The skybox I added is a sunset skybox.  
+Part 2:  
+![](lab6/texture.png)  
+Link of my shader: https://www.shadertoy.com/view/wsBBzz  
+Link of cool shader:  https://www.shadertoy.com/view/3slcWr  
