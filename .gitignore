@@ -1,3 +1,7 @@
 
-lab5/New Unity Project/Temp/StagingArea/Data/Native/build.bc
 Library/
+Temp/
+Build/
+Logs/
+Obj/
+UserSettings/
