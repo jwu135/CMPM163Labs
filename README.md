@@ -45,3 +45,15 @@ Part 2:
 ![](lab6/texture.png)  
 Link of my shader: https://www.shadertoy.com/view/wsBBzz  
 Link of cool shader:  https://www.shadertoy.com/view/3slcWr  
+
+## lab 7  
+Part 1:
+video: https://drive.google.com/file/d/16mqtLZHNAyMDd6IwKt7_5kiTxBlAdbq4/view?usp=sharing  
+I have a sphere with the tutorial shader, a mountain plane with my own shader and texture, a plane wave as water and changed directional light to make the normal texture looks awesome. My most challenging part was to make the mountain plane looks nice. At first it only folds in one axis. What I did to solve this is to split the position of distorted UVs and re-combine that the distortion is based on x and z axies instead of x and y axies. The most interesting part is when I was looking around my mountain plane, I found one direction with the best reflection of the directional/sun light. I changed the direction of the light to make my cemara see that effect.  
+Check in with my partner:  
+i. Which part did they do?  
+
+ii. Which part of a tutorial did your partner find most challenging?  
+
+iii. Which part of a tutorial did your partner find most interesting?  
+
