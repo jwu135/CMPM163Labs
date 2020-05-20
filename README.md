@@ -52,8 +52,8 @@ video: https://drive.google.com/file/d/16mqtLZHNAyMDd6IwKt7_5kiTxBlAdbq4/view?us
 I have a sphere with the tutorial shader, a mountain plane with my own shader and texture, a plane wave as water and changed directional light to make the normal texture looks awesome. My most challenging part was to make the mountain plane looks nice. At first it only folds in one axis. What I did to solve this is to split the position of distorted UVs and re-combine that the distortion is based on x and z axies instead of x and y axies. The most interesting part is when I was looking around my mountain plane, I found one direction with the best reflection of the directional/sun light. I changed the direction of the light to make my cemara see that effect.  
 Check in with my partner:  
 i. Which part did they do?  
-
+Jason: Part 2.  
 ii. Which part of a tutorial did your partner find most challenging?  
-
+Jason: I think the most challenging part for mine was just trying to come up with a cool way to do the ocean effects. I didn't really enjoy having to manually setup and import meshes (that part was the most annoying).  
 iii. Which part of a tutorial did your partner find most interesting?  
-
+Jason: An interesting part was how I got the waves to look after my second initial run. It looked like you dropped a ball into a pool and the waves kept originating from the center.  
