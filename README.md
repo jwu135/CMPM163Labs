@@ -62,5 +62,9 @@ Jason: An interesting part was how I got the waves to look after my second initi
 Part 1:  
 ![](lab8/201217.jpg)  
 ![](lab8/screenshot.png)  
-My precedural city is based on Venice. I changed the position(height) of the buildings that allows all the building to be built on grass, and the plane was changed to water-like texture. As a result, it looks like a city over rivers.  
-Note: It's 9:28PM May 26th, I cannot get reply from my partner for the check-in. I will update if he replies me later.
+My procedural city is based on Venice. I changed the position(height) of the buildings that allows all the building to be built on grass, and the plane was changed to water-like texture. As a result, it looks like a city over rivers.  
+Baoqing's city:  
+i. Write what your partner did for the creative portion of the lab and what you thought was cool about it.  
+His city is a coastal city. He picked it because it has a straight coast line that is easy to implement. He also added a texture for sky and different textures for the buildings. I think it is cool that he used the wave from lab 7.  
+ii. Did your partner teach you anything by showing you what they did?  
+No.  
