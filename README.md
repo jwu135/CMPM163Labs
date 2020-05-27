@@ -57,3 +57,10 @@ ii. Which part of a tutorial did your partner find most challenging?
 Jason: I think the most challenging part for mine was just trying to come up with a cool way to do the ocean effects. I didn't really enjoy having to manually setup and import meshes (that part was the most annoying).  
 iii. Which part of a tutorial did your partner find most interesting?  
 Jason: An interesting part was how I got the waves to look after my second initial run. It looked like you dropped a ball into a pool and the waves kept originating from the center.  
+
+## lab 8  
+Part 1:  
+![](lab8/201217.jpg)  
+![](lab8/screenshot.png)  
+My precedural city is based on Venice. I changed the position(height) of the buildings that allows all the building to be built on grass, and the plane was changed to water-like texture. As a result, it looks like a city over rivers.  
+Note: It's 9:28PM May 26th, I cannot get reply from my partner for the check-in. I will update if he replies me later.
