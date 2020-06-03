@@ -71,6 +71,6 @@ No.
 
 ## lab 9  
 Part 1:
-![](screenshot_tutorial.png)  
-![](screenshot_my_rule.png)  
+![](lab9/screenshot_tutorial.png)  
+![](lab9/screenshot_my_rule.png)  
 My rule is F->FF+[FF]-[-FF]  
