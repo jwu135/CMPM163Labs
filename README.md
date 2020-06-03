@@ -68,3 +68,9 @@ i. Write what your partner did for the creative portion of the lab and what you 
 His city is a coastal city. He picked it because it has a straight coast line that is easy to implement. He also added a texture for sky and different textures for the buildings. I think it is cool that he used the wave from lab 7.  
 ii. Did your partner teach you anything by showing you what they did?  
 No.  
+
+## lab 9  
+Part 1:
+![](screenshot_tutorial.png)  
+![](screenshot_my_rule.png)  
+My rule is F->FF+[FF]-[-FF]  
